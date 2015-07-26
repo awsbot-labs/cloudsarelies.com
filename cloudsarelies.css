@@ -2,7 +2,6 @@
   Thanks to Jaume Sanchez
   http://www.clicktorelease.com/
 */
-
 #viewport {
     bottom: 0;
     left: 0;
@@ -23,14 +22,12 @@
     transform-style: preserve-3d;
     width: 512px;
     /*background-color: rgba( 255, 0, 0, .2 );*/
-    
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
 }
 .cloudBase {
     /*background-color: rgba( 255, 0, 255, .5 );*/
-    
     height: 20px;
     left: 256px;
     margin-left: -10px;
@@ -48,14 +45,11 @@
     margin-left: -128px;
     margin-top: -128px;
     /*background-color: rgba( 0, 255, 255, .1 );*/
-    
     -webkit-transition: opacity .5s ease-out;
     -moz-transition: opacity .5s ease-out;
     -o-transition: opacity .5s ease-out;
 }
-
 /* Style */
-
 html,
 body {
     width: 100%;
@@ -69,6 +63,11 @@ body {
 footer {
     padding-left: 30px;
 }
+/*  
+    Footer Style
+    by Jaffry Jalal
+    http://www.dullneon.com
+*/
 span.footnote {
     font-family: Inconsolata, monospace;
     font-size: 10px;
@@ -80,7 +79,6 @@ span.footnote {
     http://stever.ca
     http://www.cssstickyfooter.com
 */
-
 * {
     margin: 0;
     padding: 0;
@@ -101,7 +99,6 @@ body {
     padding-bottom: 180px;
 }
 /* must be same height as the footer */
-
 #footer {
     position: relative;
     margin-top: -40px;
@@ -111,7 +108,6 @@ body {
     clear: both;
 }
 /*Opera Fix*/
-
 body:before {
     /* thanks to Maleika (Kohoutec)*/
     
@@ -125,7 +121,6 @@ body:before {
 /*
   You also need to include this conditional style in the <head> of your HTML file to feed this style to IE 6 and lower and 8 and higher.
 */
-
 <!--[if !IE 7]> <style type="text/css"> #wrap {
     display: table;
     height: 100%
