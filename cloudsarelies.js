@@ -78,7 +78,7 @@ function createCloud() {
         var cloud = document.createElement('img');
         cloud.style.opacity = 0;
         var r = Math.random();
-        var src = 'cloud.png';
+        var src = 'https://cloud.githubusercontent.com/assets/8880327/8893841/38bc0a52-3399-11e5-945f-2957ec22dec0.png';
         (function(img) {
             img.addEventListener('load', function() {
                 img.style.opacity = .8;
