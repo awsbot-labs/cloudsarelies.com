@@ -1,3 +1,8 @@
+/*
+    Thanks to Jaume Sanchez
+    http://www.clicktorelease.com/blog/how-to-make-clouds-with-css-3d
+*/
+
 (function() {
     var lastTime = 0;
     var vendors = ['ms', 'moz', 'webkit', 'o'];
@@ -25,9 +30,20 @@
         };
 }())
 
+
+/*
+    objects is an array of cloud bases
+    layers is an array of cloud layers
+*/
 var layers = [],
     objects = [],
 
+/*
+    Defining our variables
+    world and viewport are DOM elements,
+    worldXAngle and worldYAngle are floats that hold the world rotations,
+    d is an int that defines the distance of the world from the camera 
+*/
     world = document.getElementById('world'),
     viewport = document.getElementById('viewport'),
 
@@ -40,7 +56,11 @@ viewport.style.webkitPerspective = p;
 viewport.style.MozPerspective = p;
 viewport.style.oPerspective = p;
 
-
+/*
+    Creates a single cloud base and adds several cloud layers.
+    Each cloud layer has random position ( x, y, z ), rotation (a)
+    and rotation speed (s). layers[] keeps track of those divs.
+*/
 function createCloud() {
 
     var div = document.createElement('div');
@@ -94,6 +114,10 @@ function createCloud() {
     return div;
 }
 
+/*
+    Clears the DOM of previous clouds bases 
+    and generates a new set of cloud bases
+*/
 function generate() {
     objects = [];
     if (world.hasChildNodes()) {
@@ -106,6 +130,12 @@ function generate() {
     }
 }
 
+/*
+    Changes the transform property of world to be
+    translated in the Z axis by d pixels,
+    rotated in the X axis by worldXAngle degrees and
+    rotated in the Y axis by worldYAngle degrees.
+*/
 function updateView() {
     var t = 'translateZ( ' + d + 'px ) rotateX( ' + worldXAngle + 'deg) rotateY( ' + worldYAngle + 'deg)';
     world.style.webkitTransform = t;
@@ -113,7 +143,11 @@ function updateView() {
     world.style.oTransform = t;
 }
 
-
+/*
+    Iterate layers[], update the rotation and apply the
+    inverse transformation currently applied to the world.
+    Notice the order in which rotations are applied.
+*/
 function update() {
 
     for (var j = 0; j < layers.length; j++) {
@@ -130,3 +164,4 @@ function update() {
 }
 
 generate();
+//update();
