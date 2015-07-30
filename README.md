@@ -1,4 +1,4 @@
-# [cloudsarelies](http://www.cloudsarelies.com/)
+# cloudsarelies
 Simplfied CSS 3D Clouds http://www.cloudsarelies.com/
 
 Built on h2o and love from the 21st Century
