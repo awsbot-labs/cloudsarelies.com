@@ -126,3 +126,16 @@ body:before {
     height: 100%
 }
 </style> <![endif]-->
+
+#left {
+  float: left;
+}
+#right {
+  float: right;
+}
+
+.tunes {
+  position: relative;
+  bottom: 315px;
+  
+}
